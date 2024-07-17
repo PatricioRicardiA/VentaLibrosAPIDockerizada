@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VentaLibrosAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0b8ee007a5a28adaf6ab2141e15a2a4af30a623")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d96c4a45efc1c4ba387f518877bab7f322fc189")]
 [assembly: System.Reflection.AssemblyProductAttribute("VentaLibrosAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VentaLibrosAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

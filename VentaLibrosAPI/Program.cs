@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using VentaLibrosAPI.Contexts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var connectionString = builder.Configuration.GetConnectionString("con");
+builder.Services.AddDbContext<AppLibrosBDContext>(opt => opt.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
