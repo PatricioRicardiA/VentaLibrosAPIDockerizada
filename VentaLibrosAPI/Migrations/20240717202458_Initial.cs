@@ -82,8 +82,7 @@ namespace VentaLibrosAPI.Migrations
                     Publicacion = table.Column<DateOnly>(type: "date", nullable: false),
                     Precio = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     AutorId = table.Column<int>(type: "int", nullable: false),
-                    CategoriaId = table.Column<int>(type: "int", nullable: false),
-                    CategoriaID = table.Column<int>(type: "int", nullable: false)
+                    CategoriaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -95,8 +94,8 @@ namespace VentaLibrosAPI.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Libros_Categorias_CategoriaID",
-                        column: x => x.CategoriaID,
+                        name: "FK_Libros_Categorias_CategoriaId",
+                        column: x => x.CategoriaId,
                         principalTable: "Categorias",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
@@ -151,9 +150,9 @@ namespace VentaLibrosAPI.Migrations
                 column: "AutorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Libros_CategoriaID",
+                name: "IX_Libros_CategoriaId",
                 table: "Libros",
-                column: "CategoriaID");
+                column: "CategoriaId");
         }
 
         /// <inheritdoc />

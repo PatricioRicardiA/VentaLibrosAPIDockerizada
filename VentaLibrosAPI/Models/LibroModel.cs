@@ -14,12 +14,13 @@ namespace VentaLibrosAPI.Models
         [Required]
         public Decimal Precio { get; set; }
 
+        
         public int AutorId { get; set; }
         [ForeignKey("AutorId")]
         public AutorModel Autor { get; set; }
 
         public int CategoriaId { get; set; }
-        [ForeignKey("CategoriaID")]
+        [ForeignKey("CategoriaId")]
         public CategoriaModel Categoria { get; set;}
     }
 }

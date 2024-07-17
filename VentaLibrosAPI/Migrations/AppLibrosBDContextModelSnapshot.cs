@@ -127,9 +127,6 @@ namespace VentaLibrosAPI.Migrations
                     b.Property<int>("AutorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoriaID")
-                        .HasColumnType("int");
-
                     b.Property<int>("CategoriaId")
                         .HasColumnType("int");
 
@@ -147,7 +144,7 @@ namespace VentaLibrosAPI.Migrations
 
                     b.HasIndex("AutorId");
 
-                    b.HasIndex("CategoriaID");
+                    b.HasIndex("CategoriaId");
 
                     b.ToTable("Libros");
                 });
@@ -209,7 +206,7 @@ namespace VentaLibrosAPI.Migrations
 
                     b.HasOne("VentaLibrosAPI.Models.CategoriaModel", "Categoria")
                         .WithMany()
-                        .HasForeignKey("CategoriaID")
+                        .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
